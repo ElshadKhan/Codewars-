@@ -1,13 +1,33 @@
-Codewars Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+For this challenge you need to create a simple SUM statement that will sum all the ages.
+people table schema
+    id
+    name
+    age
+select table schema
+    age_sum (sum of ages)
+    NOTE: Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
 
-Examples:
-1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
-2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
-3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
-4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+select sum(age) as age_sum from people
 
 
 
-function isDivisible(n, x, y) {
-  return (n%x == 0 && n%y ==0) ? true : false;
-}
+
+Create a simple SELECT query to display student information of all ACTIVE students.
+TABLE STRUCTURE:
+students
+Id 	FirstName 	LastName 	IsActive
+Note: IsActive (true or false)
+
+select * from students where IsActive
+
+
+
+
+Given the following table 'decimals':
+** decimals table schema **
+    id
+    number1
+    number2
+Return a table with one column (mod) which is the output of number1 modulus number2.
+
+SELECT mod (number1, number2) FROM decimals
