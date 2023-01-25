@@ -1,0 +1,24 @@
+// My solution
+function isPalindrome(x) {
+  let value = x.toString()
+  let result
+  if (value.length === 1) return true
+  for (let i = 0; i < Math.floor(value.length/2); i++) {
+    if (value[i] === value[value.length - (i+1)]) {
+        result = true
+    } else {
+      return false
+    }
+  }
+  return result;
+};
+
+№1 solution
+
+function isPalindrome(x) {
+  let value = x.toString()
+  for (let i = 0; i < Math.floor(value.length/2); i++) {
+    if (value[i] !== value[value.length - (i+1)]) return false
+  }
+  return true;
+};
