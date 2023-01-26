@@ -1,0 +1,15 @@
+// My solution
+
+function longestCommonPrefix(strs) {
+    let prefStr = ""
+    for (let i = 0; i < strs[0].length; i++) {
+      if (strs.filter(s => strs[0][i] === s[i]).length === strs.length || strs.length === 1) {
+        prefStr += strs[0][i]
+      } else {
+        return prefStr
+      }
+    }
+    return prefStr
+}
+
+console.log(longestCommonPrefix(["cir","car"]));
