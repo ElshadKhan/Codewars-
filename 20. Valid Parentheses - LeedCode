@@ -1,0 +1,21 @@
+// My solution
+
+const isValid = function (s) {
+  let array1 = ['[','{','(']
+  let array2 = [']','}',')']
+  let newArray = []
+  for (let i = 0; i < s.length; i++) {
+    let index1 = array1.indexOf(s[i])
+    let index2 = array2.indexOf(s[i])
+    if (s.length%2) return false
+    if (index1 !== -1) newArray.push(s[i]) 
+    if (index2 !== -1) {
+      if (newArray.at(-1) === array1[index2]) {
+        newArray.pop()
+      } else return false
+    }
+  }
+  return newArray.length === 0 ? true : false
+}
+
+console.log(isValid('({}{}[])'));
